@@ -6,11 +6,9 @@ Node structure implementation with left and right child pointers
 **/
 struct Node {
     int data;
-    bool mark;
     struct Node *left, *right;
     Node(int data)
     {
-        this->mark = false;
         this->data = data;
         left = right = NULL;
     }
