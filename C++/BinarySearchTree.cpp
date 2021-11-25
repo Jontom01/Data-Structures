@@ -229,14 +229,14 @@ public:
 int main()
 {
     BST test;
-    test1.insert(4);
-    test1.insert(5);
-    test1.insert(6);
-    test1.insert(2);
-    test1.insert(1);
-    test1.insert(2);
-    test1.insert(8);
-    test1.insert(7);
-    test1.parent(1);
+    test.insert(4);
+    test.insert(5);
+    test.insert(6);
+    test.insert(2);
+    test.insert(1);
+    test.insert(2);
+    test.insert(8);
+    test.insert(7);
+    test.parent(1);
     return 0;
 }
