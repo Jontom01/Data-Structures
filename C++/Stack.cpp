@@ -54,7 +54,7 @@ private:
             return;
         }
         else{
-            std::cout << node -> data;
+            std::cout << node -> data << " ";
             traversal(node -> child);
         }
     }
@@ -64,7 +64,7 @@ public:
         bottom = insertREC(bottom, x);
     }
     //calls the traversal method
-    void printStack(){
+    void print(){
         traversal(bottom);
         std::cout << std::endl;
     }
@@ -85,8 +85,6 @@ int main()
   test.push(5);
   test.push(6);
   test.pop();
-  test.printSTack();
+  test.print();
   return 0;
 }
-  
-  
