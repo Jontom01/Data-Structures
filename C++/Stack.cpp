@@ -1,4 +1,5 @@
 #include <iostream>
+//revise algorithms
 class Stack{
 //stack created using a linked list, where the top of the stack is the end of the list
 //and the bottom of the stack is the front of the list
