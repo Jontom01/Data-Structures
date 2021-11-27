@@ -1,4 +1,5 @@
 import java.util.Arrays;
+//need to change implementation to use external hash functions so that I can fill a file with Hash functions and use this as the working OA hash table
 /**
  * Implmentation of an Open Address hash table
  */
