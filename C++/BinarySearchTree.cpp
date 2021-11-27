@@ -13,8 +13,9 @@ struct Node {
         left = right = NULL;
     }
 };
-
-
+/**
+Implementation of the binary search tree ADT
+**/
 class BST{
 private:
      Node* root = NULL;
@@ -79,7 +80,6 @@ private:
         postOrderRec(node->left);
 
     }
-
     /**
     Recursively calculates the height of the tree by finding the length of the longest stem
     @param node
@@ -171,10 +171,7 @@ private:
         }
     }
 
-  
-
 public:
-   
     /**
     Constructor that sets root to NULL
     **/
@@ -200,7 +197,6 @@ public:
         postOrderRec(root);
         std::cout << std::endl;
     }
-
     /**
     Calls lengthREC
     @return the length of the BST instance
@@ -221,7 +217,6 @@ public:
     calls removeREC
     **/
     void remove(int x){root = removeREC(root, x);}
-
 };
 
 int main()
