@@ -45,10 +45,24 @@ class MaxHeap:
 
         else:
             return objLeftChild
+    
+    def insert(self, obj):
+        self.arr[0] += 1
+        self.arr.append(obj)
+        self._createMaxHeap()
+    
+    def remove(self):
+        self.arr[0] -= 1
+        out = self.arr[1]
+        self.arr.pop(1)
+        self._createMaxHeap()
+        return out
 
     def print(self):
         print(self.arr)
 
 x = [2,3,34,4,5,6,7,3]
 test = MaxHeap(x)
+test.insert(5)
 test.print()
+print(test.remove())
