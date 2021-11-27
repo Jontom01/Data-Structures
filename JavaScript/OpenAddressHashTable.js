@@ -1,3 +1,4 @@
+//this implementation is purposely not that fast
 class OAHashTable{
     #tableSize;
     #table = [];
