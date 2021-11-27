@@ -1,6 +1,7 @@
 #include <iostream>
 #include"mystack.h"
 #include <stack>
+//needs comments
 struct Node{
     int data;
     struct Node* child;
@@ -14,9 +15,8 @@ struct Node{
 
 class DBLL{
 private:
-
     Node* head = nullptr;
-
+private:
     Node* insertREC(Node* node, Node* parent, int x){
         if(node == NULL){
             node = new Node(x);
