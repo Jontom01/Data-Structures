@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stack>
-
+//needs comments and revise algorithms
 struct Node{
     int data;
     struct Node* child;
