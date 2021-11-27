@@ -1,3 +1,5 @@
+#Needs comments 
+#recursive implementation
 #Node class
 class Node:
     def __init__(self, data, next = None):
