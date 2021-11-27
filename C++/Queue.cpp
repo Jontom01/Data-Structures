@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+//needs comments and revise algorithms
 class Queue{
 private:
     struct Node {
