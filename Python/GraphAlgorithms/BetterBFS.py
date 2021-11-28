@@ -24,8 +24,11 @@ class ALGraph:
     
     def printGraph(self):
         for key in self.hashTable:
-            print(key, " ", self.hashTable[key])
-        print()
+            if len(self.hashTable[key]) > 1:
+                print(key, end="'s neighbors: ")
+                for i in range(1, len(self.hashTable[key])):
+                    print(self.hashTable[key][i], end=" ")
+                print()
 
 class BFS:
     def __init__(self, ALGraph):
