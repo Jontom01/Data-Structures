@@ -28,11 +28,13 @@ class ALGraph:
                 return counter
             counter += 1
     def find(self, target):
+        
         vertexIndex = self.search(target)
         return self.table[vertexIndex]
 
     #flag values specifies whether the edge of a vertex is going to be directed or undirected
     def adjacentTo(self, vertex, neighbor, flag):
+
         tableIndex = self.search(vertex)
         neighborNode = Node(neighbor)
         #flag = 0 means undirected. Every node in an undirected adjacency list that isnt the head has a second pointer, sourcePointer, that points to
@@ -40,11 +42,12 @@ class ALGraph:
         if flag == 0:
             neighborNode.sourcePointer(self.find(neighbor))
         curr = self.table[tableIndex]
-        while curr.next != None:
+        while curr.next:
             curr = curr.next
         curr.next = neighborNode
 
     def pointUndirected(self, vertex, neighbor):
+        
         self.adjacentTo(vertex, neighbor, 0)
         self.adjacentTo(neighbor, vertex, 0)
         
@@ -54,7 +57,7 @@ class ALGraph:
     def printGraph(self):
         for node in self.table:
             curr = node
-            while(curr != None):
+            while curr:
                 print(curr.data, end="->")
                 curr = curr.next
             print()
@@ -81,7 +84,7 @@ class BFS:
             #remove parent from queue
             queue.pop(0)
             #runs through all the vertexes that are adjacent to the parent vertex
-            while node != None:
+            while node:
                 #checks if the sourcePointer of the current vertex is white
                 if node.sourcePointer.color == 0:
                     #add every adjacent vertex to the queue and make it adjacent to parent in the BFSTree
