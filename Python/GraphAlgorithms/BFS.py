@@ -71,7 +71,7 @@ class BFS:
         #adds the source vertex to the queue and BFSTree. Becomes BFSTree root
         queue.append(vertex)
         BFSTree.insertVertex(vertex)
-        while len(queue) > 0: 
+        while queue: 
             #parent vertex is the head of the queue
             parent = self.graph.find(queue[0]) 
             #parent vertex color is grey
