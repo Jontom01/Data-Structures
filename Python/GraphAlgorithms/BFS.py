@@ -28,13 +28,11 @@ class ALGraph:
                 return counter
             counter += 1
     def find(self, target):
-        
         vertexIndex = self.search(target)
         return self.table[vertexIndex]
 
     #flag values specifies whether the edge of a vertex is going to be directed or undirected
     def adjacentTo(self, vertex, neighbor, flag):
-
         tableIndex = self.search(vertex)
         neighborNode = Node(neighbor)
         #flag = 0 means undirected. Every node in an undirected adjacency list that isnt the head has a second pointer, sourcePointer, that points to
@@ -47,7 +45,6 @@ class ALGraph:
         curr.next = neighborNode
 
     def pointUndirected(self, vertex, neighbor):
-        
         self.adjacentTo(vertex, neighbor, 0)
         self.adjacentTo(neighbor, vertex, 0)
         
