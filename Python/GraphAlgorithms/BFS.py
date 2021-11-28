@@ -1,9 +1,10 @@
 class Node:
     #Basic node class with exception that is sourcePointer
     #sourcePointer explained further down in the code
-    def __init__(self, data, next=None, sourcePointer=None, color=None):
+    def __init__(self, data, next=None, sourcePointer=None):
         self.data = data
         self.next = next
+        self.color = None
         
     def getData(self):
         return self.data
