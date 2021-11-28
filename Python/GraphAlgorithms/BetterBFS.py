@@ -4,6 +4,7 @@ class ALGraph:
 
     def insertVertex(self, data):
         self.hashTable[data] = [None]
+        
     def search(self, target):
         if target in self.hashTable:
             return target
